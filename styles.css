@@ -1,3 +1,22 @@
 h1{
     text-align: center;
 }
+p{
+    text-align: center;
+}
+.couler_bleu{
+    border: 2px solid blue;
+    color: blue;
+}
+.couler_bleu{
+    border: 2px solid green;
+    color: green;
+}
+.couler_bleu{
+    border: 2px solid orange;
+    color: orange;
+}
+.couler_bleu{
+    border: 2px solid red;
+    color: red;
+}
