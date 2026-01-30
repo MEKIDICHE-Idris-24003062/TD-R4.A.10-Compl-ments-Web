@@ -1,22 +1,43 @@
-h1{
+body {
+    font-family: sans-serif;
+}
+
+h1, p {
     text-align: center;
 }
-p{
-    text-align: center;
+
+#temp-zone {
+    font-size: 2em;
+    font-weight: bold;
+    padding: 20px;
+    width: 200px;
+    margin: 0 auto;
+    border-radius: 10px;
+    transition: all 0.3s;
 }
-.couler_bleu{
-    border: 2px solid blue;
+
+#msg-zone {
+    font-weight: bold;
+    min-height: 1.5em;
+    margin-bottom: 10px;
+}
+
+.bordure-bleue {
+    border: 3px solid blue;
     color: blue;
 }
-.couler_bleu{
-    border: 2px solid green;
+
+.bordure-verte {
+    border: 3px solid green;
     color: green;
 }
-.couler_bleu{
-    border: 2px solid orange;
+
+.bordure-orange {
+    border: 3px solid orange;
     color: orange;
 }
-.couler_bleu{
-    border: 2px solid red;
+
+.bordure-rouge {
+    border: 3px solid red;
     color: red;
 }
