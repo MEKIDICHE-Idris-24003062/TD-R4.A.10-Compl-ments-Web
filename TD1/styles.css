@@ -1,43 +1,139 @@
 body {
-    font-family: sans-serif;
+    font-family: system-ui,
+        -apple-system,
+        Segoe UI,
+        Roboto,
+        Arial,
+        sans-serif;
+    margin: 0;
+    padding: 18px
 }
 
-h1, p {
-    text-align: center;
+h1,
+h2,
+p {
+    text-align: center
+}
+
+.small {
+    color: #666;
+    font-size: .9rem
+}
+
+.hidden {
+    display: none
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 12px
+}
+
+nav a {
+    margin-right: 12px
+}
+
+.card {
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 12px;
+    margin: 12px 0
 }
 
 #temp-zone {
     font-size: 2em;
-    font-weight: bold;
+    font-weight: 700;
     padding: 20px;
-    width: 200px;
+    width: 260px;
     margin: 0 auto;
     border-radius: 10px;
-    transition: all 0.3s;
+    transition: all .3s
 }
 
 #msg-zone {
-    font-weight: bold;
+    font-weight: 700;
     min-height: 1.5em;
-    margin-bottom: 10px;
+    margin: 10px auto;
+    max-width: 700px
+}
+
+.alert {
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #f1c40f;
+    background: #fff8db
+}
+
+.alert--danger {
+    border-color: #e74c3c;
+    background: #ffe7e4
 }
 
 .bordure-bleue {
-    border: 3px solid blue;
-    color: blue;
+    border: 3px solid #00f;
+    color: #00f
 }
 
 .bordure-verte {
-    border: 3px solid green;
-    color: green;
+    border: 3px solid #008000;
+    color: #008000
 }
 
 .bordure-orange {
-    border: 3px solid orange;
-    color: orange;
+    border: 3px solid #ffa500;
+    color: #ffa500
 }
 
 .bordure-rouge {
-    border: 3px solid red;
-    color: red;
+    border: 3px solid #f00;
+    color: #f00
+}
+
+.tabs {
+    margin-top: 18px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden
+}
+
+.tablist {
+    display: flex;
+    gap: 6px;
+    background: #f7f7f7;
+    padding: 8px;
+    justify-content: center
+}
+
+.tablist button {
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 8px;
+    padding: 8px 12px;
+    cursor: pointer
+}
+
+.tablist button[aria-selected="true"] {
+    border-color: #333;
+    outline: 2px solid #333;
+    outline-offset: 1px
+}
+
+.tabpanel {
+    padding: 14px
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%
+}
+
+.table th,
+.table td {
+    border-bottom: 1px solid #eee;
+    padding: 8px;
+    text-align: left
 }

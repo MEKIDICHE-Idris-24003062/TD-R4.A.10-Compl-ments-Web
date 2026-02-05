@@ -3,22 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TD Météo</title>
+    <title>Relevé de températures</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="1.js"></script>
+    <script defer src="3.js"></script>
 </head>
 <body>
-<h1>TD 1 Relevé de températures</h1>
-<section>
-    <p id="msg-zone"></p>
-    <p id="temp-zone">En attente...</p>
-</section>
+<header class="topbar">
+    <h1>Relevé de températures</h1>
+    <nav aria-label="Navigation principale">
+        <a href="#/" data-page="home">Accueil</a>
+        <a href="#/mon-compte" data-page="account">Mon compte</a>
+    </nav>
+</header>
 
-<section>
-    <h2>Historique</h2>
-    <ul id="historique-liste"></ul>
-</section>
+<section id="ajax-content" aria-live="polite" aria-atomic="true" aria-relevant="all" class="card"></section>
 
-<script src="1.js"></script>
-<script src="3.js"></script>
+<section class="tabs" aria-label="Capteurs">
+    <div id="tabs" class="tablist" role="tablist" aria-label="Onglets">
+        <button id="tab-capteur" role="tab" aria-selected="false" aria-controls="panel-capteur" tabindex="0">Capteur</button>
+        <button id="tab-historique" role="tab" aria-selected="false" aria-controls="panel-historique" tabindex="-1">Historique</button>
+    </div>
+
+    <section id="panel-capteur" class="tabpanel" role="tabpanel" aria-labelledby="tab-capteur" hidden>
+        <p id="temp-zone" aria-live="polite" aria-atomic="true">En attente...</p>
+        <p id="msg-zone" role="alert" class="alert hidden"></p>
+        <p id="status" class="small"></p>
+    </section>
+
+    <section id="panel-historique" class="tabpanel" role="tabpanel" aria-labelledby="tab-historique" hidden>
+        <h2>Historique</h2>
+        <ul id="historique-liste" aria-label="Historique temps réel"></ul>
+
+        <table aria-label="Historique depuis JSON" class="table">
+            <thead>
+            <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Température</th>
+            </tr>
+            </thead>
+            <tbody id="historique-body"></tbody>
+        </table>
+    </section>
+</section>
 </body>
 </html>

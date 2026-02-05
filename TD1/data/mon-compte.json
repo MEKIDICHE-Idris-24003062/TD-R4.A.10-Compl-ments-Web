@@ -1,0 +1,9 @@
+{
+  "nom": "idris",
+  "email": "idrisayane@gmail.com",
+  "preferences": {
+    "uniteTemperature": "°C",
+    "seuilAlerteFroid": 0,
+    "seuilAlerteChaud": 30
+  }
+}
